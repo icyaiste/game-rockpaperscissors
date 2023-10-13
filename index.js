@@ -32,20 +32,50 @@ if (userMove > computerMove) {
 } else {
     console.log('Its a tie! Try again')
 }
-
 const userChoice =  [buttonRock, buttonPaper, buttonScissors];
-
-buttonPaper.addEventListener('click', ()=> {
-    console.log('you chose ' + buttonPaper);
-})  
 */
 
 const buttonRock = document.querySelector('.rock');
 const buttonPaper = document.querySelector('.paper');
 const buttonScissors = document.querySelector('.scissors');
 
+
 buttonRock.addEventListener('click', () => {
-    console.log('you chose ' + buttonRock);
+    console.log('you chose rock');
+    
+
+const computerChoice = Math.floor(Math.random() * 10);  // Returns a random integer from 0 to 9.
+    console.log('computer chose ' + typeOf computerChoice);
+
+
+    if (computerChoice <= 3) {
+        console.log('Rock');
+    } else if (computerChoice > 6) {
+        console.log('Paper');
+    } else {
+        console.log('Scissors');
+    }
+
+
+    if (buttonRock && computerChoice >6){
+        console.log('Computer won');
+       }  else if (buttonRock && computerChoice == 4 || 5 ||6){
+        console.log('You won!');
+        }else if (buttonScissors && computerChoice >6){
+        console.log('You won!');
+        } else if (buttonScissors && computerChoice <=3){
+        console.log('Computer won');
+        } else if (buttonPaper && computerChoice == 4 || 5 ||6 ){
+            console.log('Computer won');
+        }  else if (buttonPaper && computerChoice <=3){
+            console.log('You won!');
+        } else {
+        console.log('It is a tie!');
+       }
+});
+
+buttonPaper.addEventListener('click', () => {
+    console.log('you chose paper');
 
     const computerChoice = Math.floor(Math.random() * 10);  // Returns a random integer from 0 to 9.
     console.log('computer chose ' + computerChoice);
@@ -59,4 +89,53 @@ buttonRock.addEventListener('click', () => {
         console.log('Scissors');
     }
 
+
+    if (buttonRock && computerChoice >6){
+        console.log('Computer won');
+       }  else if (buttonRock && computerChoice === 4 || 5 ||6){
+        console.log('You won!');
+        }else if (buttonScissors && computerChoice >6){
+        console.log('You won!');
+        } else if (buttonScissors && computerChoice <=3){
+        console.log('Computer won');
+        } else if (buttonPaper && computerChoice === 4 || 5 ||6 ){
+            console.log('Computer won');
+        }  else if (buttonPaper && computerChoice <=3){
+            console.log('You won!');
+        } else {
+        console.log('It is a tie!');
+       }
+});
+
+buttonScissors.addEventListener('click', () => {
+    console.log('you chose scissors');
+
+    const computerChoice = Math.floor(Math.random() * 10);  // Returns a random integer from 0 to 9.
+    console.log('computer chose ' + computerChoice);
+
+
+    if (computerChoice <= 3) {
+        console.log('Rock');
+    } else if (computerChoice > 6) {
+        console.log('Paper');
+    } else {
+        console.log('Scissors');
+    }
+
+
+    if (buttonRock && computerChoice >6){
+        console.log('Computer won');
+       }  else if (buttonRock && computerChoice === 4 || 5 ||6){
+        console.log('You won!');
+        }else if (buttonScissors && computerChoice >6){
+        console.log('You won!');
+        } else if (buttonScissors && computerChoice <=3){
+        console.log('Computer won');
+        } else if (buttonPaper && computerChoice === 4 || 5 ||6 ){
+            console.log('Computer won');
+        }  else if (buttonPaper && computerChoice <=3){
+            console.log('You won!');
+        } else {
+        console.log('It is a tie!');
+       }
 });
