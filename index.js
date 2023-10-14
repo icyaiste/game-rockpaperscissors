@@ -45,7 +45,7 @@ buttonRock.addEventListener('click', () => {
     
 
 const computerChoice = Math.floor(Math.random() * 10);  // Returns a random integer from 0 to 9.
-    console.log('computer chose ' + typeOf computerChoice);
+    console.log('computer chose ' + computerChoice);
 
 
     if (computerChoice <= 3) {
