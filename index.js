@@ -34,16 +34,6 @@ if (userMove > computerMove) {
 }
 
 
-
-
-}else if (buttonScissors && computerChoice >6){
-        console.log('You won!');
-        } else if (buttonScissors && computerChoice <=3){
-        console.log('Computer won');
-        } else if (buttonPaper && computerChoice == 4 || 5 ||6 ){
-            console.log('Computer won');
-        }  else if (buttonPaper && computerChoice <=3){
-            console.log('You won!');;
 */
 
 const buttonRock = document.querySelector('.rock');
@@ -119,7 +109,6 @@ buttonScissors.addEventListener('click', () => {
     }
 
 
-    
         if (buttonScissors && computerChoice >6){
         console.log('You won!');
         } else if (buttonScissors && computerChoice <=3){
